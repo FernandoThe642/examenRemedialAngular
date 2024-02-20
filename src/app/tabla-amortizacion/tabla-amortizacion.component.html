@@ -1,0 +1,22 @@
+<div class="container mt-4">
+    <h2>Tabla de Amortización</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th># Cuota</th>
+          <th>Capital</th>
+          <th>Interés</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cuota of cuotas; index as i">
+          <td>{{ i + 1 }}</td>
+          <td>{{ cuota.capital | currency:'USD':'symbol':'1.2-2' }}</td>
+          <td>{{ cuota.interes | currency:'USD':'symbol':'1.2-2' }}</td>
+          <td>{{ cuota.total | currency:'USD':'symbol':'1.2-2' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

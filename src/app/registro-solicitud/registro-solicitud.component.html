@@ -1,0 +1,28 @@
+<h1>dds</h1>
+<div class="container">
+    <h2>Registro de Solicitud de Préstamo</h2>
+    <form [formGroup]="solicitudForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="cedulaCliente">Cédula del Cliente</label>
+        <input type="text" id="cedulaCliente" class="form-control" formControlName="cedulaCliente">
+      </div>
+      <div class="form-group">
+        <label for="nombreCliente">Nombre del Cliente</label>
+        <input type="text" id="nombreCliente" class="form-control" formControlName="nombreCliente">
+      </div>
+      <div class="form-group">
+        <label for="correoElectronico">Correo Electrónico</label>
+        <input type="email" id="correoElectronico" class="form-control" formControlName="correoElectronico">
+      </div>
+      <div class="form-group">
+        <label for="monto">Monto (USD)</label>
+        <input type="number" id="monto" class="form-control" formControlName="monto">
+      </div>
+      <div class="form-group">
+        <label for="meses">Meses</label>
+        <input type="number" id="meses" class="form-control" formControlName="meses">
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="!solicitudForm.valid">Enviar Solicitud</button>
+    </form>
+  </div>
+  
